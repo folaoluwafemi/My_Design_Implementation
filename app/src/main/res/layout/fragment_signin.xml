@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="match_parent"
+    tools:context=".fragments.SigninFragment">
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="40dp"
+            android:orientation="vertical"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.494"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.075">
+
+            <com.google.android.material.imageview.ShapeableImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="30dp"
+                android:src="@drawable/signin_first_image" />
+
+            <FrameLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <com.google.android.material.imageview.ShapeableImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/signin_image" />
+
+                <com.google.android.material.imageview.ShapeableImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom"
+                    android:layout_margin="32dp"
+                    android:src="@drawable/signin_ibook" />
+            </FrameLayout>
+
+            <TextView
+                android:id="@+id/sign_in"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:text="@string/sign_in"
+                android:textColor="#3A3A3A"
+                android:textSize="30sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/welcome_signin_text"
+                android:textAppearance="@style/sign_in"
+                android:textStyle="bold"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:layout_marginBottom="10dp"
+                android:text="@string/email_address"
+                android:textAppearance="@style/sign_in"
+                android:textStyle="bold" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="10dp"
+                android:text="@string/password"
+                android:textAppearance="@style/sign_in"
+                android:textStyle="bold" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:passwordToggleEnabled="true">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white"
+                    android:hint="@string/password_hint"
+                    app:passwordToggleEnabled="true" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <Button
+                android:id="@+id/sign_in_button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="40dp"
+                android:text="@string/sign_in"
+                android:textAlignment="center"
+                android:textAllCaps="false"
+                android:textAppearance="@style/sign_in" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/constraint_view"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="65dp"
+                android:layout_marginBottom="20dp">
+
+                <TextView
+                    android:id="@+id/new_to"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/setup_account_text"
+                    android:textAppearance="@style/new_to_iboo"
+                    app:layout_constraintEnd_toStartOf="@id/account_setup"
+                    app:layout_constraintTop_toTopOf="@id/constraint_view" />
+
+                <TextView
+                    android:id="@+id/account_setup"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/set_up_an_account"
+                    android:textAppearance="@style/sign_in"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toEndOf="@id/new_to"
+                    app:layout_constraintTop_toTopOf="@id/constraint_view" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
